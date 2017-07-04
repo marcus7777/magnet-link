@@ -1,0 +1,32 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../polymer/polymer.html">
+<!--
+  `<magnet-link></magnet-link>` Magnetic link generated from hash and input.
+  @demo demo.html
+-->
+<dom-module id="magnet-link">
+  <template>
+    <a href="[[link]]">[[name]]</a>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "magnet-link",
+    properties:{
+      link:{
+        computed:"makeLink(name,hash)",
+      },
+    },
+    makeLink: function(name, hash){
+      return "magnet:"
+        + "?xt=urn:btih:" + hash
+        + "&dn=" + encodeURIComponent(name)
+        + "&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80"
+        + "&tr=udp%3A%2F%2Fopentor.org%3A2710"
+        + "&tr=udp%3A%2F%2Ftracker.ccc.de%3A80"
+        + "&tr=udp%3A%2F%2Ftracker.blackunicorn.xyz%3A6969"
+        + "&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969"
+        + "&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969"
+    },
+  })
+</script>

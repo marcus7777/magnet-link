@@ -1,0 +1,17 @@
+{
+  "name": "magnet-link",
+  "version": "1.0.0",
+  "description": "Magnetic link generated from hash and input\n\n",
+  "main": "magnet-link.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "polymer": "*"
+  },
+  "devDependencies": {
+    "iron-test-helpers": "*",
+    "web-component-tester": "^5.0.0"
+  }
+}
